@@ -1,2 +1,2 @@
 #!/bin/sh
-echo a > ~/aa
+echo a > ~/aa3
