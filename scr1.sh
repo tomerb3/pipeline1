@@ -1,7 +1,7 @@
 #!/bin/sh
 # v5
-echo #$1# > ~/abcd1
-echo #$1# > abcd2
-echo #$1# > /tmp/abcd3
-
+echo aa > ~/abcd1
+echo aa > abcd2
+echo aa > /tmp/abcd3
+echo bb > /var/lib/jenkins/aaaaaaaaaaaaaaaaaaaa
 
