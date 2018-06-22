@@ -1,4 +1,7 @@
 
+import java.sql.DriverManager
+
+DriverManager.registerDriver(new com.mysql.jdbc.Driver())
 
 //Drop table if it already exists
 //sql.execute('drop TABLE users')
