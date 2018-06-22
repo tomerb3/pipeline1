@@ -1,12 +1,11 @@
-import groovy.sql.Sql
- 
+
 
 //Drop table if it already exists
 //sql.execute('drop TABLE users')
 
 
 node {
-     def sql = Sql.newInstance("jdbc:mysql://localhost:3306", "tomer","qwer90", "com.mysql.jdbc.Driver")
+    
  
     currentBuild.result = 'SUCCESS'
 
@@ -51,7 +50,7 @@ node {
         stage('mysql 1') {
 
             //We can also insert by prepared statements by
-            sql.execute('select * from tomer1')
+          
 
             //sh '${JENKINS_HOME}/workspace/it-build-tools/src/scripts/it-build-ctl publish-rpms'
         //    sh 'env | sort'
