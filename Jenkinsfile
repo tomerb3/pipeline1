@@ -42,7 +42,7 @@ node {
 
         stage('run script a1') {
 
-            sh '${JENKINS_HOME}/workspace/pipe1/scr1.sh'
+            sh '${JENKINS_HOME}/workspace/pipe1/scr1.sh k1'
 
         }
 
