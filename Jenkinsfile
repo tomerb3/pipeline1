@@ -53,9 +53,8 @@ node {
 
             //We can also insert by prepared statements by
           
-                 def sql = Sql.newInstance("jdbc:mysql://192.168.14.91/mysql", 
-                  "tomer", "qwer90", "com.mysql.jdbc.Driver") 
-         query = "SELECT * from tomer1" 
+                 def sql = Sql.newInstance("jdbc:mysql://192.168.14.91/world", "nativeuser", "password", "com.mysql.jdbc.Driver") 
+         query = "SELECT * from country" 
          println sql.rows(query) 
          sql.close() 
             //sh '${JENKINS_HOME}/workspace/it-build-tools/src/scripts/it-build-ctl publish-rpms'
