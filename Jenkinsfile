@@ -1,5 +1,7 @@
 
 import java.sql.DriverManager
+import jenkins.model.*
+jenkins = Jenkins.instance
 
 DriverManager.registerDriver(new com.mysql.jdbc.Driver())
 
