@@ -3,7 +3,6 @@
 //Drop table if it already exists
 //sql.execute('drop TABLE users')
 
-
 node {
     
  
@@ -41,7 +40,7 @@ node {
 
         }
 
-        stage('run script 1') {
+        stage('run script a1') {
 
             sh '${JENKINS_HOME}/workspace/pipe1/scr1.sh'
 
