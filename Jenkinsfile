@@ -1,9 +1,11 @@
 
-import java.sql.DriverManager
-import jenkins.model.*
-jenkins = Jenkins.instance
+//import java.sql.DriverManager
+//import jenkins.model.*
+//jenkins = Jenkins.instance
 
-DriverManager.registerDriver(new com.mysql.jdbc.Driver())
+//DriverManager.registerDriver(new com.mysql.jdbc.Driver())
+
+
 
 //Drop table if it already exists
 //sql.execute('drop TABLE users')
@@ -53,17 +55,7 @@ node {
 
         stage('mysql 1') {
 
-            //We can also insert by prepared statements by
-          
-               //  def sql = Sql.newInstance("jdbc:mysql://192.168.14.91/world", "nativeuser", "password", "com.mysql.jdbc.Driver") 
-         //query = "SELECT * from country" 
-         //println sql.rows(query) 
-         //sql.close() 
-            //sh '${JENKINS_HOME}/workspace/it-build-tools/src/scripts/it-build-ctl publish-rpms'
-        //    sh 'env | sort'
-
-         //   build job: 'seeded.rpm-publish', parameters: [string(name: 'SOURCE_WORKSPACE', value: "${env.WORKSPACE}"), string(name: 'TARGET_REPO', value: '')]
-
+         
         }
 
         stage('Build-Containers') {
