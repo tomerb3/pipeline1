@@ -4,20 +4,11 @@ import jenkins.model.*
 import hudson.*
 import hudson.model.*
 import hudson.EnvVars
-
-
-import groovy.json.JsonSlurperClassic
-import groovy.json.JsonBuilder
-import groovy.json.JsonOutput
-import com.microsoft.sqlserver.jdbc.SQLServerDriver
-import groovy.sql.Sql
-import com.mysql.jdbc.Driver;
+ 
 //@Library('DSG_PIPELINE') _
-def baner = new jenkins.sapiens.notify.Baner(this)
+ 
 
-println "TEST"
-baner.baner("Sapiens DSG", "#", "red-white")
-baner.baner("Pipeline scripts", "@", "magenta-yellow")
+ 
 
 //import java.sql.DriverManager
 //import jenkins.model.*
