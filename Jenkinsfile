@@ -65,6 +65,11 @@ node {
         }
 
         stage('mysql 1') {
+
+             wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'xterm']) {
+           sh 'something that outputs ansi colored stuff'
+            }
+
           ansiColor('xterm') {
            echo 'something that outputs ansi colored stuff'
           }
