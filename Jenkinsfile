@@ -73,7 +73,7 @@ node {
         stage "\u001B[31mI'm Red\u001B[0m Now not"
          
         }
-
+        }
         stage('Build-Containers') {
 
          //   sh '${JENKINS_HOME}/workspace/it-build-tools/src/scripts/it-build-ctl build-containers'
