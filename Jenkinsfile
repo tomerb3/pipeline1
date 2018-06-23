@@ -65,7 +65,9 @@ node {
         }
 
         stage('mysql 1') {
-
+          ansiColor('xterm') {
+           echo 'something that outputs ansi colored stuff'
+          }
          
         }
 
