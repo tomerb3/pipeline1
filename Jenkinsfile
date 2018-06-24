@@ -8,7 +8,7 @@ import hudson.EnvVars
 import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
-import com.microsoft.sqlserver.jdbc.SQLServerDriver
+//import com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 //@Library('DSG_PIPELINE') _
  
@@ -76,10 +76,10 @@ println "${env.JOB_NAME}"
 println project
 
 
-def sql = Sql.newInstance("jdbc:sqlserver://oit-tomerb;DatabaseName=temp1", "tmp1","1234567", "com.mysql.jdbc.Driver")
-List a = sql.rows('SELECT name1 from projectinfo where id=1')
-def tomer = a[0][0]
-println tomer
+//def sql = Sql.newInstance("jdbc:sqlserver://oit-tomerb;DatabaseName=temp1", "tmp1","1234567", "com.mysql.jdbc.Driver")
+//List a = sql.rows('SELECT name1 from projectinfo where id=1')
+//def tomer = a[0][0]
+//println tomer
 
 
 
