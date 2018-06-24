@@ -76,8 +76,8 @@ println "${env.JOB_NAME}"
 println project
 
 
-def sql = Sql.newInstance("jdbc:sqlserver://alis-dsg-sql01;DatabaseName=DSGDB", "AlisUser","it12345*", "com.mysql.jdbc.Driver")
-List a = sql.rows('SELECT envname from projectinfo where id = 3')
+def sql = Sql.newInstance("jdbc:sqlserver://oit-tomerb;DatabaseName=temp1", "tmp1","1234567q", "com.mysql.jdbc.Driver")
+List a = sql.rows('SELECT name1 from projectinfo')
 def tomer = a[0][0]
 println tomer
 
