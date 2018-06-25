@@ -14,10 +14,7 @@ import groovy.json.JsonOutput
 
 node {
     
- @GrabConfig(systemClassLoader=true)
-@Grapes([
-  @Grab('mysql:mysql-connector-java:5.1.6')
-])
+
     currentBuild.result = 'SUCCESS'
 
     try {
@@ -59,7 +56,10 @@ node {
         }
 
         stage('sql 1') {
-
+ @GrabConfig(systemClassLoader=true)
+@Grapes([
+  @Grab('mysql:mysql-connector-java:5.1.6')
+])
 def project = env.JOB_NAME.split('/')[0]
 println "${env.JOB_NAME}"
 println project
