@@ -1,20 +1,23 @@
 #!groovy
+import groovy.sql.Sql
 
-//@GrabConfig(systemClassLoader=true)
-//@Grapes([
-  //  @Grab('mysql:mysql-connector-java:5.1.6')
-//])
 import jenkins.*
 import jenkins.model.*
 import hudson.*
 import hudson.model.*
 import hudson.EnvVars
 
-import groovy.sql.Sql
+
 
 import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
+
+@GrabConfig(systemClassLoader=true)
+@Grapes([
+  @Grab('mysql:mysql-connector-java:5.1.6')
+])
+
 //import com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 
