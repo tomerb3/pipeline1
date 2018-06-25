@@ -1,10 +1,17 @@
 #!groovy
+
+@GrabConfig(systemClassLoader=true)
+@Grapes([
+    @Grab('mysql:mysql-connector-java:5.1.6')
+])
 import jenkins.*
 import jenkins.model.*
 import hudson.*
 import hudson.model.*
 import hudson.EnvVars
- 
+import groovy.sql.Sql
+
+
 //@Library('DSG_PIPELINE') _
  
 
@@ -66,13 +73,13 @@ node {
 
         stage('mysql 1') {
 
-           
+           def sql = sql.newInstance("jdbc:mysql://192.168.14.91:3306/mysql", "tomer", "qwer90","com.mysql.jdbc.Driver")
 
            ansiColor('xterm') {
         // Just some echoes to show the ANSI color.
         stage "\u001B[31mI'm Red\u001B[0m Now not"
-         
-        }
+            }
+            sql.close()
         }
         stage('Build-Containers') {
 
