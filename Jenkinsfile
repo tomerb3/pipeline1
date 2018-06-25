@@ -9,8 +9,16 @@ import jenkins.model.*
 import hudson.*
 import hudson.model.*
 import hudson.EnvVars
+<<<<<<< HEAD
 import groovy.sql.Sql
 
+=======
+ 
+import groovy.json.JsonSlurperClassic
+import groovy.json.JsonBuilder
+import groovy.json.JsonOutput
+//import com.microsoft.sqlserver.jdbc.SQLServerDriver
+>>>>>>> 8acd3f17ca182bcd238b0a7d47951645b3be3189
 
 //@Library('DSG_PIPELINE') _
  
@@ -71,16 +79,32 @@ node {
 
         }
 
-        stage('mysql 1') {
+        stage('sql 1') {
 
-           def sql = sql.newInstance("jdbc:mysql://192.168.14.91:3306/mysql", "tomer", "qwer90","com.mysql.jdbc.Driver")
+def project = env.JOB_NAME.split('/')[0]
+println "${env.JOB_NAME}"
+println project
 
-           ansiColor('xterm') {
+
+//  def sql = Sql.newInstance("jdbc:sqlserver://oit-tomerb;DatabaseName=temp1", "tmp1","1234567", "com.mysql.jdbc.Driver")
+//List a = sql.rows('SELECT name1 from projectinfo where id=1')
+//def tomer = a[0][0]
+//println tomer
+
+      def sql = sql.newInstance("jdbc:mysql://192.168.14.91:3306/mysql", "tomer", "qwer90","com.mysql.jdbc.Driver")
+
+          ansiColor('xterm') {
         // Just some echoes to show the ANSI color.
         stage "\u001B[31mI'm Red\u001B[0m Now not"
+
             }
             sql.close()
-        }
+
+        echo "\u001b[34m Test Test"
+         }
+
+
+
         stage('Build-Containers') {
 
          //   sh '${JENKINS_HOME}/workspace/it-build-tools/src/scripts/it-build-ctl build-containers'
