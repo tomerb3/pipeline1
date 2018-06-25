@@ -1,9 +1,9 @@
 #!groovy
 
 //@GrabConfig(systemClassLoader=true)
-@Grapes([
-    @Grab('mysql:mysql-connector-java:5.1.6')
-])
+//@Grapes([
+  //  @Grab('mysql:mysql-connector-java:5.1.6')
+//])
 import jenkins.*
 import jenkins.model.*
 import hudson.*
