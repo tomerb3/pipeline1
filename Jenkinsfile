@@ -11,7 +11,9 @@ import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 
+import java.sql.DriverManager
 
+DriverManager.registerDriver(new com.mysql.jdbc.Driver())
 node {
     
 
