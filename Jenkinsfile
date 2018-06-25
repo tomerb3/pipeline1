@@ -1,6 +1,6 @@
 #!groovy
 
-@GrabConfig(systemClassLoader=true)
+//@GrabConfig(systemClassLoader=true)
 @Grapes([
     @Grab('mysql:mysql-connector-java:5.1.6')
 ])
