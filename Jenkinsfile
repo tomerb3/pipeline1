@@ -96,6 +96,12 @@ println project
         stage "\u001B[31mI'm Red\u001B[0m Now not"
 
             }
+
+List a = sql.rows('SELECT * from tomer1')
+def tomer = a[0][0]
+println tomer
+
+
             sql.close()
 
         echo "\u001b[34m Test Test"
