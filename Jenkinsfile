@@ -9,16 +9,14 @@ import jenkins.model.*
 import hudson.*
 import hudson.model.*
 import hudson.EnvVars
-<<<<<<< HEAD
+
 import groovy.sql.Sql
 
-=======
- 
 import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 //import com.microsoft.sqlserver.jdbc.SQLServerDriver
->>>>>>> 8acd3f17ca182bcd238b0a7d47951645b3be3189
+
 
 //@Library('DSG_PIPELINE') _
  
