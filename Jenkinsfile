@@ -6,40 +6,18 @@ import jenkins.model.*
 import hudson.*
 import hudson.model.*
 import hudson.EnvVars
-
-
-
+import com.microsoft.sqlserver.jdbc.SQLServerDriver
 import groovy.json.JsonSlurperClassic
 import groovy.json.JsonBuilder
 import groovy.json.JsonOutput
 
-@GrabConfig(systemClassLoader=true)
-@Grapes([
-  @Grab('mysql:mysql-connector-java:5.1.6')
-])
-
-//import com.microsoft.sqlserver.jdbc.SQLServerDriver
-
-
-//@Library('DSG_PIPELINE') _
- 
-
- 
-
-//import java.sql.DriverManager
-//import jenkins.model.*
-//jenkins = Jenkins.instance
-
-//DriverManager.registerDriver(new com.mysql.jdbc.Driver())
-
-
-
-//Drop table if it already exists
-//sql.execute('drop TABLE users')
 
 node {
     
- 
+ @GrabConfig(systemClassLoader=true)
+@Grapes([
+  @Grab('mysql:mysql-connector-java:5.1.6')
+])
     currentBuild.result = 'SUCCESS'
 
     try {
