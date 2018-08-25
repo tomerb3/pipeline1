@@ -1,10 +1,8 @@
 pipeline {
     agent { label "master"}
-    stages {        
-            steps {      
-                       
-                
-                
+    stages {
+        stage('1') {
+            steps {
                 script {
                     def tests = [:]
                     for (f in findFiles(glob: '**/*.action')) {
@@ -26,5 +24,5 @@ pipeline {
                 }
             }
         }       
-    
+    }
 }
