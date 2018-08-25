@@ -10,7 +10,7 @@ pipeline {
                             node {
                                 stage("${f}") {
                                     echo '${f}'
-                                    dir ('../') { 
+                                    dir ('/var/lib/jenkins/workspace/pipe1') { 
                                       sh('script.sh kk1')
                                     }
                                  
