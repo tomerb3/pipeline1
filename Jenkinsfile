@@ -10,7 +10,7 @@ pipeline {
                             node {
                                 stage("${f}") {
                                     echo '${f}'
-                                    /tmp/files/${f}
+                                 
                                 }
                             }
                         }
