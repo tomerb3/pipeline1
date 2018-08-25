@@ -1,7 +1,13 @@
 pipeline {
     agent { label "master"}
     stages {
-        stage('1') {
+        stage('first stage') {
+            
+             sh("/tmp/script2.sh ${VAR1}")
+            
+            
+        }
+        stage('aaa1') {
             steps {
                 script {
                     def tests = [:]
