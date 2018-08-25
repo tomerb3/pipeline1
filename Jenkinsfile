@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     def tests = [:]
-                    for (f in findFiles(glob: '**/*.action')) {
+                    for (f in findFiles(glob: '**/*.sh')) {
                         tests["${f}"] = {
                             node {
                                 stage("${f}") {
