@@ -5,11 +5,12 @@ pipeline {
             steps {
                 script {
                     def tests = [:]
-                    for (f in findFiles(glob: '/tmp/files/8.txt')) {
+                    for (f in findFiles(glob: '/tmp/files/*.sh')) {
                         tests["${f}"] = {
                             node {
                                 stage("${f}") {
                                     echo '${f}'
+                                    /tmp/files/${f}
                                 }
                             }
                         }
