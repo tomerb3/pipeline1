@@ -1,14 +1,19 @@
 pipeline {
     agent { label "master"}
     stages {
-        stage('first stage') {
-            steps{
+      
+        stage('aaa1') {
+            steps {
+                
+                 
+             before1{
              sh("/tmp/script2.sh ${VAR1}")
             
             }
-        }
-        stage('aaa1') {
-            steps {
+        
+                
+                
+                
                 script11 {
                     def tests = [:]
                     for (f in findFiles(glob: '**/*.action')) {
