@@ -11,7 +11,7 @@ pipeline {
                                 stage("${f}") {
                                     echo '${f}'
                                     
-                                    sh(${F})
+                                    sh('script.sh kk1')
                                  
                                 }
                             }
