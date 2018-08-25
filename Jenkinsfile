@@ -2,15 +2,14 @@ pipeline {
     agent { label "master"}
     stages {
       
-        stage('aaa1') {
+        
             steps {
                 
                  
-             before1{
-             sh("/tmp/script2.sh ${VAR1}")
-            
-            }
-        
+               before1{
+                  sh("/tmp/script2.sh ${VAR1}")            
+                  }
+         
                 
                 
                 
