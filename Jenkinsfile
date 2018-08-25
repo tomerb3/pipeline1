@@ -9,7 +9,7 @@ pipeline {
                         tests["${f}"] = {
                             node {
                                 stage("${f}") {
-                                    echo '${f}'
+                                    echo 'stg aaa ${f} aaa'
                                      
                                      
                                         
