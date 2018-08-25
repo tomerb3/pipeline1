@@ -13,7 +13,7 @@ pipeline {
                                      
                                      
                                         
-                                        sh('/tmp/script.sh kk1')
+                                        sh('/tmp/script.sh $f')
                                     
                                  
                                 }
