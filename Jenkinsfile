@@ -13,7 +13,7 @@ pipeline {
                                      
                                      
                                         
-                                        sh('cd /tmp && ./script.sh kk1')
+                                        sh('/tmp/script.sh kk1')
                                     
                                  
                                 }
