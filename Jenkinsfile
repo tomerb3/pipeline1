@@ -10,7 +10,8 @@ pipeline {
                             node {
                                 stage("${f}") {
                                     echo '${f}'
-                                    ./${f}
+                                    
+                                    sh(${F})
                                  
                                 }
                             }
