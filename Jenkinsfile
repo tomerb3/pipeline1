@@ -10,8 +10,9 @@ pipeline {
                             node {
                                 stage("${f}") {
                                     echo '${f}'
-                                    
-                                    sh('./script.sh kk1')
+                                    dir ('../') { 
+                                      sh('script.sh kk1')
+                                    }
                                  
                                 }
                             }
