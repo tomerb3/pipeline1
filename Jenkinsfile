@@ -13,7 +13,7 @@ pipeline {
                                      
                                      
                                         
-                                    sh("/tmp/script.sh ${f}")
+                                    sh("/tmp/script.sh ${f} && sleep 30 ")
                                     
                                  
                                 }
