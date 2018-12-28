@@ -1,6 +1,26 @@
-node(){
+String basePath = 'example3'
 
-println "start"
+folder(basePath) {
+    description 'This example shows how to use the configure block.'
+}
 
+job("$basePath/configure-block-example") {
 
+    logRotator {
+        numToKeep 5
+    }
+
+    triggers {
+        scm 'H/5 * * * *'
+    }
+
+    steps {
+        gradle 'assemble'
+    }
+
+    configure { Node project ->
+        project / publishers / 'com.cloudbees.jenkins.GitHubCommitNotifier' {
+            resultOnFailure 'FAILURE'
+        }
+    }
 }
